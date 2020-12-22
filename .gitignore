@@ -2,6 +2,7 @@ venv/
 node_modules/
 __pycache__/
 .env
+app.yaml
 .idea
 .DS_Store
 cloud_sql_proxy
