@@ -1,5 +1,5 @@
 from app import app, db
-from app.models import User, Project, Organization, Tag
+from app.models import User
 from flask import render_template, url_for, session, redirect
 
 import os

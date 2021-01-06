@@ -8,20 +8,3 @@ class User(db.Model):
     avatar_url = db.Column(db.String(), unique=True, nullable=True)
     location = db.Column(db.String(200), unique=False, nullable=True)
 
-class Tag(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(), unique=True, nullable=False)
-    image_url = db.Column(db.String(), unique=False, nullable=False)
-
-class Project(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(), unique=True, nullable=False)
-    description = db.Column(db.String(), unique=True, nullable=False)
-    image_url = db.Column(db.String(), unique=False, nullable=False)
-
-class Organization(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(), unique=True, nullable=False)
-    description = db.Column(db.String(), unique=True, nullable=False)
-    image_url = db.Column(db.String(), unique=False, nullable=False)
-
