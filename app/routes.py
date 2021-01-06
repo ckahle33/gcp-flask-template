@@ -27,24 +27,3 @@ def index():
 def onboarding():
     return render_template('onboarding.html')
 
-@app.route('/projects')
-def projects():
-    projects = Project.query.all()
-    if len(projects) != 0:
-        return render_template('projects.html', projects=projects)
-    else:
-        return render_template('projects.html', projects={title:"test", description:"test description"})
-
-@app.route('/organizations')
-def organizations():
-    orgs=Organization.query.all()
-    return render_template('organizations.html', orgs=orgs)
-
-@app.route('/developers')
-def developers():
-    return render_template('developers.html')
-
-@app.route('/tags')
-def tags():
-    tags = Tag.query.all()
-    return render_template('tags.html', tags=tags)
